@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<title>台灣流浪狗領養資訊</title>
+<head>
+{% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/bootstrap/css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/style.css' %}" />
+    <script src="{% static 'polls/bootstrap/js/bootstrap.min.js' %}" ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div class="container body">
+<div class="jumbotron top intro">
+    <p class="info">為了方便瀏覽領養動物的資訊, 這邊收集了台灣優質的領養平台內容. 如果有其他優質的平台請聯絡我, 我會盡力將更多網站內容一起彙整進來.</p>
+    <a class="btn btn-lg btn-primary" href="http://www.peta.org/living/companion-animals/8-reasons-adopt-buy-dogs/" role="button" target="_blank">
+        支持認養八個理由</a>
+    <div class="pull-right">
+        <a id="fb" class="fa fa-facebook-square fa-2x fb" href="https://www.facebook.com/slashtu" target="_blank"><span class="slash">塗小彥</span></a>
+    </div>
+</div>
+<div class="page-header">
+    <h1>流浪動物花園</h1>
+</div>
+<div align="center">
+{% for pet in garden_pets_list %}
+    {% if forloop.counter0|divisibleby:6 %}
+        {% if forloop.first %}
+            <div class="row">
+        {% else %}
+            </div>
+            <div class="row">
+        {% endif %}
+    {% endif %}
+    <div class="col-xs-4 col-md-2"><a href="{{ pet.path }}" target="_blank"><img class="img-thumbnail" src="{{pet.img}}"></a></div>
+    {% if forloop.last %}
+        </div>
+    {% endif %}
+{% endfor %}
+</div>
+    <div class="page-header">
+        <h1>貓狗同樂會</h1>
+    </div>
+    <div align="center">
+        {% for pet in happy_pets_list %}
+        {% if forloop.counter0|divisibleby:6 %}
+        {% if forloop.first %}
+        <div class="row">
+            {% else %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endif %}
+            <div class="col-xs-4 col-md-2"><a href="{{ pet.path }}" target="_blank"><img class="img-thumbnail" src="{{pet.img}}"></a></div>
+            {% if forloop.last %}
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+</body>
+</html>

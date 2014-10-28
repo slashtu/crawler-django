@@ -1,0 +1,36 @@
+.top {
+    margin-top: 30px;
+}
+
+.info {
+    color: #4D4D4D;
+}
+
+.body {
+    background-color: #FFFEF5;
+}
+
+.intro {
+    background-color: #F1FFE8;
+}
+
+.slash {
+    font-size: 15px;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
+.fb{
+
+}
+
+.pic {
+}
+
+.fb:hover {
+    text-decoration: none;
+}
+
+.fb:active{
+
+}
