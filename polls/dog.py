@@ -19,8 +19,7 @@ class Doghome:
         response = urllib2.urlopen( self.url)
         html = response.read()
         soup = BeautifulSoup(html)
-        array = soup.findAll(href=re.compile("^http://www.doghome.org.tw/phpbb2/viewtopic.php"))
-
+        array = soup.findAll(href=re.compile("^http://www.doghome.org.tw/phpbb2/i_love_animals_big.php"))
         for item in array:
             if 'img border' in str(item):
                 path = item['href']
