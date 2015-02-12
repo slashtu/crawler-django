@@ -2,4 +2,4 @@
 http://slash.tw/pets/
 
 ##Install Beautiful Soup
-'''pip install beautifulsoup4'''
+```pip install beautifulsoup4```
