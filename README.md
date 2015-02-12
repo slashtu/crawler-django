@@ -1,5 +1,5 @@
 ##Website: 
 http://slash.tw/pets/
 
--   Install Beautiful Soup
-  > pip install beautifulsoup4
+##Install Beautiful Soup
+'''pip install beautifulsoup4'''
