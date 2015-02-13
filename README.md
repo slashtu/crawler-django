@@ -1,4 +1,4 @@
-##Website: 
+##Website
 http://slash.tw/pets/
 
 ##Install Beautiful Soup
